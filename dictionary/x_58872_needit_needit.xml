@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element label="Requested for" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+        <element choice="1" default="Legal" label="Request type" mandatory="true" max_length="40" name="request_type" type="choice">
+            <choice>
+                <element label="Facilities" value="facilities"/>
+                <element label="Human Resources" value="hr"/>
+                <element label="Legal" value="legal"/>
+                <element label="Your Department Choice" value="your_choice"/>
+            </choice>
+        </element>
+        <element label="When needed" max_length="40" name="when_needed" type="glide_date_time"/>
+    </element>
+</database>
